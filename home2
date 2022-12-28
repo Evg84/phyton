@@ -1,0 +1,50 @@
+#Задача1
+     #N=4(1,2,6,24)
+n=(int(input("Ввести число")))
+
+fact=1
+for i in range(1,n+1):
+     fact=fact*i
+     print("факториал",n,"список",fact)
+     
+
+
+#Задача2
+
+     print(f'x|y|z|¬(x ∧ y)|¬(x ∧ y) ∨ z')
+for x in range(2):
+    for y in range(2):
+         for z in range(2):
+          print(f'{x}|{y}|{z}|{int(not(x and y)) }|{int (not(x and y)) or z}')
+          
+          
+#Задача3. 
+
+phrase='one'
+lenght_phrase=len(phrase)
+symbol='onetwonine'
+symbollen=len(symbol)
+count=0
+for i in phrase:
+     for j in symbol:
+          if i==j:
+           count=count+1
+     print(i,"=",count)
+     count=0
+
+  
+#Задача4.
+
+from collections import deque
+j=0
+arr=[]
+N=int(input())
+for j in range(N):
+     arr.append(-j)
+for j in range(N):
+     if j!=-j:
+          arr.append(j)
+     arr2=deque(arr)  
+     print(arr)
+     arr2.rotate(2)
+     print(arr2)        
